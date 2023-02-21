@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: metabase_metadata
+    description: Metabase metadata
+    database: "{{ var('database') }}"
+    schema: "{{ var('schema') }}"
+    tables:
+      - name: table1
+      - name: table1
