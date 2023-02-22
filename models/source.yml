@@ -6,5 +6,9 @@ sources:
     database: "{{ var('database') }}"
     schema: "{{ var('schema') }}"
     tables:
-      - name: table1
-      - name: table1
+      - name: core_organization
+      - name: report_dashboard
+      - name: report_card
+      - name: report_dashboardcard
+      - name: report_card
+      - name: view_log
