@@ -5,4 +5,4 @@ select
     archived,
     display,
     query_type
-from report_card
+from {{ ref('stg_matabase__question') }}

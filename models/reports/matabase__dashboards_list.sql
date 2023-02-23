@@ -3,4 +3,4 @@ select
     name,
     description,
     archived 
-from report_dashboard
+from {{ ref('stg_matabase__dashboard') }}

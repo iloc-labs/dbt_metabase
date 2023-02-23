@@ -1,10 +1,10 @@
 with activity_agg as (
 
     select 
-        timestamp :: date as date_at,
+        date as date_at,
         count(user_id) as count
-    from activity
-    where topic= 'user-joined'
+    from {{ ref('stg_matabase__activity') }}
+    where topic = 'user-joined'
     group by 1
 
 )
