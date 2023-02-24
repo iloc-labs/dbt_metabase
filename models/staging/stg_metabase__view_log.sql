@@ -6,7 +6,7 @@ select
     metadata,
     {{ dbt_date.convert_timezone(
         column='cast(timestamp as ' ~ dbt.type_timestamp() ~ ')',
-        target_tz=var('metabase_target_tz', "UTC"),
-        source_tz=var('metabase_source_tz', "UTC"))
+        target_tz=var('metabase_target_tz', 'UTC'),
+        source_tz=var('metabase_source_tz', 'UTC'))
     }} as view_timestamp,
 from {{ source('metabase', 'view_log') }}

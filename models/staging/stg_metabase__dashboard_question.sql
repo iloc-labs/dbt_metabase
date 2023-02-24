@@ -4,7 +4,7 @@ select
     row,
     size_x,
     size_y,
-    card_id,
+    card_id as question_id,
     action_id,
     entity_id,
     dashboard_id,
