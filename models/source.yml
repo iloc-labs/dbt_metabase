@@ -10,29 +10,17 @@ sources:
         description: User information table
         columns:
           - name: id
-            description: 
           - name: email
-            description:
           - name: first_name
-            description:
           - name: last_name
-            description: 
           - name: date_joined
-            description: 
           - name: last_login
-            description:
           - name: is_superuser
-            description:
           - name: is_active
-            description:
           - name: reset_token
-            description:
           - name: reset_triggered
-            description:
           - name: updated_at
-            description:
           - name: locate
-            description: 
       - name: core_organization
       - name: core_session
       - name: report_dashboard
@@ -43,22 +31,12 @@ sources:
         description: User activity
         columns:
           - name: id
-            description: 
           - name: topic
-            description:
           - name: timestamp
-            description:
           - name: user_id
-            description:
           - name: model
-            description:
           - name: model_id
-            description:
           - name: database_id
-            description:
           - name: table_id
-            description:
           - name: custom_id
-            description:
           - name: details
-            description:
