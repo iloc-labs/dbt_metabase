@@ -28,4 +28,5 @@ select
         target_tz=var('metabase_target_tz', "UTC"),
         source_tz=var('metabase_source_tz', "UTC"))
     }} as updated_timestamp,
+    concat(first_name, ' ', last_name) as full_name,
 from {{ source('metabase', 'core_user') }}

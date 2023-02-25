@@ -23,7 +23,7 @@ with view_log as (
     
     select
         user_id,
-        concat(first_name, ' ', last_name) as user_name,
+        full_name,
     from {{ ref('stg_metabase__user') }}
 
 )
