@@ -4,7 +4,7 @@ sources:
   - name: metabase
     description: Metabase metadata
     database: "{{ var('metabase_database', target.database) }}"
-    schema: "{{ var('metabase_schema', 'metabase') }}"
+    schema: "{{ var('metabase_source_schema', 'metabase_raw') }}"
     tables:
       - name: core_user
         description: User information table
@@ -40,3 +40,4 @@ sources:
           - name: table_id
           - name: custom_id
           - name: details
+      - name: collection

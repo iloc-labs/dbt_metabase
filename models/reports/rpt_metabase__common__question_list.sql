@@ -5,7 +5,6 @@ select
     question.archived,
     question.display,
     question.query_type,
-    question.is_native,
     user.full_name as creator_name
 from {{ ref('stg_metabase__question') }} question
 left join {{ ref('stg_metabase__user') }} user

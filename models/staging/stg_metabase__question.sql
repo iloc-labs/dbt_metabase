@@ -23,8 +23,7 @@ select
     collection_preview,
     parameter_mappings,
     collection_position,
-    visualization_settings,
-    dataset_query like '%native%' as is_native,
+    visualization_settings
     {{ dbt_date.convert_timezone(
         column='cast(created_at as ' ~ dbt.type_timestamp() ~ ')',
         target_tz=var('metabase_target_tz', "UTC"),

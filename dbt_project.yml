@@ -18,10 +18,13 @@ clean-targets:
 
 models:
   iloc_metabase:
+    +schema: metabase
     +materialized: table
+    reports:
+      materialized: table
 
 vars:
   metabase_database: "dbt-iloc"
-  metabase_schema: "metabase"
+  metabase_source_schema: "metabase_raw"
   metabase_target_tz: "UTC"
   metabase_source_tz: "UTC"
