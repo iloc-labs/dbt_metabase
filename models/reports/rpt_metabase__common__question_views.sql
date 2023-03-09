@@ -3,7 +3,8 @@ with top_viewed_question as (
     select
         view_log.model_id as question_id,
         question.name as question_name
-        count(view_id) as view_count
+        count(view_id) as view_count,
+        count(distinct view_id) as viewers_count
     from {{ ref('stg_metabase__view_log') }} view_log
     left join {{ref('stg_metabase__question')}} question
         on view_log.model_id = question.question_id

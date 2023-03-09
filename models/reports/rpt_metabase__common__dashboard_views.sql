@@ -2,7 +2,8 @@ with top_viewed_dashboards as (
 
     select
         view_log.model_id as dashboard_id,
-        count(view_id) as view_count
+        count(view_id) as view_count,
+        count(distinct view_id) as viewers_count
     from {{ ref('stg_metabase__view_log') }} view_log
     where view_log.model = 'dashboard'
         and {{ dbt.datediff(
